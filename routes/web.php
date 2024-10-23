@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function (\App\Service\Product\ProductServiceInterface $productService) {
-//    return $productService->find(1);
-// });
-
 // Front (Client) 
 
 Route::get('/', [\App\Http\Controllers\Front\HomeController::class, 'index']);
@@ -88,38 +84,3 @@ Route::prefix('admin')->middleware('CheckAdminLogin')->group(function () {
     });
     Route::get('logout', [App\Http\Controllers\Admin\HomeController::class, 'logout']);
 });
-
-
-
-// Route::get('/', function () {
-
-//     return view('front.index');
-// });
-
-// Route::get('shop.html', function () {
-//     return view('front.shop');
-// });
-
-// Route::get('product.html', function () {
-//     return view('front.product');
-// });
-
-// Route::get('login.html', function () {
-//     return view('front.login');
-// });
-
-// Route::get('register.html', function () {
-//     return view('front.register');
-// });
-
-// Route::get('contact.html', function () {
-//     return view('front.contact');
-// });
-
-// Route::get('blog.html', function () {
-//     return view('front.blog');
-// });
-
-// Route::get('faq.html', function () {
-//     return view('front.faq');
-// });

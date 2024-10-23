@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <base href="/">
+    <base href="{{('/')}}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
@@ -16,8 +16,8 @@
 
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-    <link href="./dashboard/main.css" rel="stylesheet">
-    <link href="./dashboard/my_style.css" rel="stylesheet">
+    <link href="{{ asset('dashboard/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('dashboard/my_style.css') }}" rel="stylesheet">
 
     {{-- Morris.js --}}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
@@ -2317,7 +2317,7 @@
     </div>
     <div class="app-drawer-overlay d-none animated fadeIn"></div>
 
-    <script src="./dashboard/assets/scripts/jquery-3.2.1.min.js"></script>
+    <script src="{{ asset('dashboard/assets/scripts/jquery-3.2.1.min.js') }}"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
