@@ -59,7 +59,7 @@
                       <form  class="mt-2" method="post" action="./account/my-order" enctype="multipart/form-data">
                         @csrf
                    
-                        <input type="text" name="id" id="id" hidden value="{{  $order->id }}">
+                        <input type="text" name="id" id="id" hidden value="{{ $order->id }}">
                         <input type="text" name="status" id="status" hidden value="0">
                
                         <button type="submit" {{ $order->status == 0 || $order->status == 4 || $order->status == 6 ? 'disabled' : '' }} class="btn-shadow btn-hover-shine btn btn btn-danger" data-placement="bottom" onclick="return confirm('Bạn có muốn hủy đơn hàng này không? Nếu bạn đã thanh toán online vui lòng liên hệ hotline để nhận lại tiền!!!')">
