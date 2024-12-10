@@ -33,6 +33,9 @@ class AccountController extends Controller
     }
 
     public function login(){
+        if(Auth::check()) {
+            return redirect()->intended('');
+        }
         return view('front.account.login');
     }
 
@@ -42,7 +45,6 @@ class AccountController extends Controller
             'password' => $request->password,
             'level' => Constant::user_level_client, //Tài khoản cấp độ khách hàng bình thường
         ];
-
         $remember = $request->remember;
 
         if(Auth::attempt($credentials, $remember)){

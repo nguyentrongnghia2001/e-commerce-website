@@ -38,7 +38,7 @@
 
             <div class="row" style="background-color: #00509d; height: 200px; padding: 35px; color: white;">
                 <div class="container-fluid">
-                    <h3 class="m-0 p-0 mt-4" style="margin-top: 0; font-size: 28px; font-weight: 500;">
+                    <h3 class="m-0 p-0 mt-4" style="margin-top: 0; font-size: 28px; font-weight: 500;text-align:center">
                         <strong style="font-size: 28px; text-transform: uppercase;">Thông tin đơn hàng</strong>
                         <br>
                         Cảm ơn bạn đã tin tưởng Dongnaibeauty
@@ -46,7 +46,7 @@
                     <div class="row mt-5" style="margin-top: 35px; display: flex;">
                         <div class="col-6"
                              style="margin-bottom: 25px; flex: 0 0 50%; width: 50%; box-sizing: border-box;">
-                            <b>{{ $order->first_name . ', ' . $order->last_name }}</b>
+                            <b>{{ $order->name }}</b>
                             <br>
                             <span>
                                 <a style="color: white !important;" href="mailto:{{ $order->email }}" target="_blank">{{ $order->email }}</a>

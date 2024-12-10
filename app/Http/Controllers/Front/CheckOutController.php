@@ -53,6 +53,13 @@ class CheckOutController extends Controller
     {
         // Thêm đơn hàng
         $data = $request->all();
+
+        // Mã hóa thông tin nhạy cảm
+        $data['name'] = encrypt($data['name']);
+        $data['email'] = encrypt($data['email']);
+        $data['phone'] = encrypt($data['phone']);
+        $data['street_address'] = encrypt($data['street_address']);
+        $data['description'] = encrypt($data['description']);
         $data['status'] = Constant::order_status_ReceiveOrders;
         $order = $this->orderService->create($data);
    
@@ -78,15 +85,14 @@ class CheckOutController extends Controller
         $order->total_orders = $total;
         $order->save();
 
+        $total = Cart::total();
+        $subtotal = Cart::subtotal();
     
         if($request->payment_type == 'pay_later'){
             //Gui mail
-            $total = Cart::total();
-            $subtotal = Cart::subtotal();
+          
             $this->sendMail($order, $total, $subtotal);
-
             $this->updateQtySell($order->id);
-
             // Xóa giỏ hàng
             Cart::destroy();
 
@@ -129,7 +135,7 @@ class CheckOutController extends Controller
                 $subtotal = Cart::subtotal();
                 $this->sendMail($order, $total, $subtotal);
                 $this->updateQtySell($order->id);
-
+                $order->save();
                 // xoa gio hang
                 Cart::destroy();
 
@@ -168,12 +174,18 @@ class CheckOutController extends Controller
 
     public function sendMail($order, $total, $subtotal)
     {
-        $email_to = $order->email;
+        $email_to = decrypt($order->email);
+
+        $order->name = decrypt($order->name);
+        $order->email = decrypt($order->email);
+        $order->phone = decrypt($order->phone);
+        $order->street_address = decrypt($order->street_address);
+        $order->description = decrypt($order->description);
 
         Mail::send('front.checkout.email', 
             compact('order', 'total', 'subtotal'), 
             function ($message) use($email_to) {
-                $message->from('nghianhodoi2@gmail.com', 'Admin');
+                $message->from('nghianho157@gmail.com', 'Admin');
                 $message->to($email_to, $email_to);
                 $message->subject('Order Notification');
         });

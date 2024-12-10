@@ -24,9 +24,8 @@ class CheckAdminLogin
         }
 
         //Nếu đã đăng nhập, nhưng sai level: đăng xuất và đăng nhập lại
-        if( Auth::user()->level != Constant::user_level_admin){
+        if(Auth::user()->level != Constant::user_level_admin){
             Auth::logout();
-
             return redirect()->guest('admin/login');
         }
 

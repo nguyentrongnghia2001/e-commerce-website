@@ -85,8 +85,8 @@
                 </div>
                 <div class="pc-item">
                   <label for="pc-payal">
-                    Thanh toán online
-                    <input type="radio" name="payment_type" value="online_payment" id="pc-payal" />
+                    Thanh toán online (hiện đang được bảo trì)
+                    <input type="radio" disabled name="payment_type" value="online_payment" id="pc-payal" />
                     <span class="checkmark"></span>
                   </label>
                 </div>
