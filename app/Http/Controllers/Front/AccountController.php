@@ -39,22 +39,21 @@ class AccountController extends Controller
         return view('front.account.login');
     }
 
-    public function checkLogin(Request $request){
+    public function checkLogin(Request $request)
+    {
         $credentials = [
             'email' => $request->email,
             'password' => $request->password,
-            'level' => Constant::user_level_client, //Tài khoản cấp độ khách hàng bình thường
+            'level' => Constant::user_level_client,
         ];
         $remember = $request->remember;
-
-        if(Auth::attempt($credentials, $remember)){
-            // return redirect(''); //trang chủ
-            return redirect()->intended(''); //mặc định là trang chủ
-        } else{
-            return back() ->with('notification', 'Lỗi: Sai Email hoặc mật khẩu!');
+        if (Auth::attempt($credentials, $remember)) {
+            return redirect()->intended('');
+        } else {
+            return back()->with('notification', 'Lỗi: Sai Email hoặc mật khẩu!');
         }
-        
     }
+
 
     public function logout(){
         Auth::logout();
@@ -84,8 +83,8 @@ class AccountController extends Controller
             'email' => $request->email,
             'street_address' => $request->street_address,
             'phone' => $request->phone,
-            'password' => bcrypt($request->password), // them ham bcrypt de ma hoá password
-            'level' => Constant::user_level_client, // Register with level custummer
+            'password' => bcrypt($request->password), 
+            'level' => Constant::user_level_client,
         ];
 
         $this->userService->create($data);
@@ -97,7 +96,6 @@ class AccountController extends Controller
 
     public function myOrderIndex()
     {
-        // $orders = $this->orderService->getOrderByUserId(Auth::id());
         $orders = $this->orderService->getOrderByUserId(Auth::id());
    
         return view('front.account.my-order.index',compact('orders'));

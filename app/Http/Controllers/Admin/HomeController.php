@@ -13,19 +13,18 @@ class HomeController extends Controller
         return view('admin.login');
     }
 
-    public function postLogin(Request $request){
+    public function postLogin(Request $request)
+    {
         $credentials = [
             'email' => $request->email,
             'password' => $request->password,
             'level' => [Constant::user_level_admin] //Tài khoản cấp độ admin
         ];
-
         $remember = $request->remember;
-
         if (Auth::attempt($credentials, $remember)) {
             return redirect()->intended('admin'); //mặc định là trang chủ
         } else {
-            return back()->with('notification', 'Tài khoản mật khẩu sai!');
+            return back()->with('notification', 'Bạn không có quyền ở đây!!!!!');
         }
     }
 

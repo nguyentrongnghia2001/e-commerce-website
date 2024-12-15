@@ -29,6 +29,22 @@ class OrderController extends Controller
     {
         $orders = $this->orderService->searchAndPaginate('id', $request->get('search'));
         $order1s = $this->orderService->all();
+        foreach ($orders as $order) {
+            try {
+                $order->name = decrypt($order->name);
+                $order->email = decrypt($order->email);
+                $order->phone = decrypt($order->phone);
+                $order->street_address = decrypt($order->street_address);
+                $order->description = decrypt($order->description);
+            } catch (\Exception $e) {
+                $order->name = 'Dữ liệu không hợp lệ';
+                $order->email = 'Dữ liệu không hợp lệ';
+                $order->phone = 'Dữ liệu không hợp lệ';
+                $order->street_address = 'Dữ liệu không hợp lệ';
+                $order->description = 'Dữ liệu không hợp lệ';
+            }
+        }
+
         return view('admin.order.index',compact('orders','order1s'));
     }
 
@@ -62,7 +78,11 @@ class OrderController extends Controller
     public function show($id)
     {
         $order = $this->orderService->find($id);
-
+        $order->name = decrypt($order->name);
+        $order->email = decrypt($order->email);
+        $order->phone = decrypt($order->phone);
+        $order->street_address = decrypt($order->street_address);
+        $order->description = decrypt($order->description);
         return view('admin.order.show', compact('order'));
     }
 

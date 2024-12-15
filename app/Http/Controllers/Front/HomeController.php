@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Services\Blog\BlogServiceInterface;
 use App\Services\Product\ProductServiceInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Utilities\Constant;
 
 class HomeController extends Controller
 {
@@ -19,6 +21,9 @@ class HomeController extends Controller
     }
 
     public function index(){
+        if(Auth::check() && Auth::user()->level == 1) {
+            Auth::logout();
+        }
         $statusProducts = $this->productService->getStatusProducts();
         $blogs = $this->blogService->getLatestBlogs();
 
