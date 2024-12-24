@@ -5,6 +5,7 @@ namespace App\Http;
 use App\Http\Middleware\CheckMemberLogin;
 use App\Http\Middleware\CheckAdminLogin;
 use App\Http\Middleware\WafMiddleware;
+use App\Http\Middleware\MonitorSuspiciousIP;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -24,7 +25,8 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        'WafMiddleware'=>WafMiddleware::class
+        'WafMiddleware'=>WafMiddleware::class,
+        // 'monitor.ip' => MonitorSuspiciousIP::class
     ];
 
     /**
