@@ -45,7 +45,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => storage_path('app/backups'),
         ],
 
         'public' => [
@@ -64,7 +64,11 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
         ],
-
+        
+        'backups' => [
+            'driver' => 'local',
+            'root' => storage_path('app/backups'),
+        ],
     ],
 
     /*
