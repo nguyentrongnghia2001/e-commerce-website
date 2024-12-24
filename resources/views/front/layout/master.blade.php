@@ -84,7 +84,6 @@
                     <div class="col-lg-7 col-md-7">
                         <form action="shop">
                             <div class="advanced-search">
-                                <!-- <button type="button" class="category-btn">Tất Cả Danh Mục</button> -->
                                 <div class="input-group">
                                     <input name="search" type="text" value="{{ request('search') }}" placeholder="Tìm kiếm sản phẩm..." />
                                     <button type="submit"><i class="ti-search"></i></button>
@@ -143,8 +142,6 @@
                                 </div>
 
                             </li>
-                            {{-- <li class="cart-price">{{ Cart::total() }}đ</li> --}}
-                            {{-- <li class="cart-price">{{ number_format(Cart::total(), 2, ',', '.') }}đ</li> --}}
                             <li class="cart-price">{{ Cart::total() }}đ</li>
 
                         </ul>
@@ -168,8 +165,6 @@
                                 <li><a href="./account/my-order">Đơn hàng của tôi</a></li>
                                 <li><a href="./faq">Các Câu Hỏi Thường Gặp</a></li>
                                 <li><a href="./checkout">Thanh Toán</a></li>
-                                {{-- <li><a href="faq.html">Các Câu Hỏi Thường Gặp</a></li> --}}
-                                {{-- <li><a href="./checkout/editInfor">Thay đổi thông tin</a></li> --}}
                                 <li><a href="./account/register">Đăng Ký</a></li>
                                 @if(!Auth::check())
                                     <li><a href="./account/login">Đăng Nhập</a></li>
