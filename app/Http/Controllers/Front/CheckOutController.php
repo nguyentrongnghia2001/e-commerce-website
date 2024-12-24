@@ -182,7 +182,7 @@ class CheckOutController extends Controller
         $order->street_address = decrypt($order->street_address);
         $order->description = decrypt($order->description);
 
-        Mail::send('front.checkout.email', 
+        Mail::send('emails.checkout', 
             compact('order', 'total', 'subtotal'), 
             function ($message) use($email_to) {
                 $message->from('nghianho157@gmail.com', 'Admin');
