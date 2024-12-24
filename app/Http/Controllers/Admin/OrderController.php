@@ -78,12 +78,15 @@ class OrderController extends Controller
     public function show($id)
     {
         $order = $this->orderService->find($id);
-        $order->name = decrypt($order->name);
-        $order->email = decrypt($order->email);
-        $order->phone = decrypt($order->phone);
-        $order->street_address = decrypt($order->street_address);
-        $order->description = decrypt($order->description);
-        return view('admin.order.show', compact('order'));
+        if($order) {
+            $order->name = decrypt($order->name);
+            $order->email = decrypt($order->email);
+            $order->phone = decrypt($order->phone);
+            $order->street_address = decrypt($order->street_address);
+            $order->description = decrypt($order->description);
+            return view('admin.order.show', compact('order'));
+        }
+        return redirect('admin/order/')->with('error', 'Không tìm thấy đơn hàng này');
     }
 
     /**

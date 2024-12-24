@@ -61,6 +61,9 @@ class AccountController extends Controller
     }
 
     public function register(){
+        if(Auth::check()) {
+            Auth::logout();
+        }
         return view('front.account.register');
     }
 
@@ -97,7 +100,6 @@ class AccountController extends Controller
     public function myOrderIndex()
     {
         $orders = $this->orderService->getOrderByUserId(Auth::id());
-   
         return view('front.account.my-order.index',compact('orders'));
     }
 
@@ -127,7 +129,11 @@ class AccountController extends Controller
     public function myOrderShow($id)
     {
         $order = $this->orderService->find($id);
-
+        $order->name = decrypt($order->name);
+        $order->email = decrypt($order->email);
+        $order->phone = decrypt($order->phone);
+        $order->street_address = decrypt($order->street_address);
+        $order->description = decrypt($order->description);
         return view('front.account.my-order.show', compact('order'));
     }
 }
