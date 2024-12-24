@@ -29,8 +29,8 @@
           <table>
             <thead>
               <tr>
-                <th>Hình ảnh sản phẩm</th>
                 <th>Id</th>
+                <th>Hình ảnh sản phẩm</th>
                 <th class="p-name">Tên sản phẩm</th>
                 <th>Tổng đơn</th>
                 <th>Chi tiết</th>
@@ -39,10 +39,10 @@
             <tbody>
                @foreach($orders as $order)
                 <tr>
+                    <td class="first-row">{{ $order->id }}</td>
                     <td class="cart-pic first-row">           
                       <img src="front/img/products/{{ $order->orderDetails[0]->product->productImages[0]->path}}" alt="{{ $order->orderDetails[0]->product->name }}">
                     </td>
-                    <td class="first-row">{{ $order->id }}</td>
                     <td class="cart-title first-row">
                         <h5>
                           {{ $order->orderDetails[0]->product->name }}

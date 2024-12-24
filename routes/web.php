@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,7 +36,6 @@ Route::prefix('cart')->group(function () {
 
 });
 
-
 Route::prefix('checkout')->group(function () {
     Route::get('', [App\Http\Controllers\Front\CheckOutController::class, 'index']);
     Route::post('/', [App\Http\Controllers\Front\CheckOutController::class, 'addOrder']);
@@ -58,8 +56,6 @@ Route::prefix('account')->group(function(){
         Route::post('/', [App\Http\Controllers\Front\AccountController::class, 'cannelMyOrder']);
     });
 });
-
-
 //Dashboard (Admin)
 Route::prefix('admin')->middleware('CheckAdminLogin')->group(function () {
     Route::redirect('', 'admin/dashboard');
