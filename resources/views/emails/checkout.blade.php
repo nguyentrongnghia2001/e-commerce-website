@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here"/>
-    <title>Order Notification | Dongnaibeauty</title>
+    <title>Order Notification | NNK SHOP</title>
 </head>
 
 <body
@@ -32,7 +32,7 @@
                 </h1>--}}
                 <h1 class="pl-2"
                     style="color: orange; line-height: 30px; float: left; padding-left: 20px; font-size: 40px; font-weight: 500;">
-                    Dongnaibeauty
+                    NNK SHOP
                 </h1>
             </div>
 
@@ -41,7 +41,7 @@
                     <h3 class="m-0 p-0 mt-4" style="margin-top: 0; font-size: 28px; font-weight: 500;text-align:center">
                         <strong style="font-size: 28px; text-transform: uppercase;">Thông tin đơn hàng</strong>
                         <br>
-                        Cảm ơn bạn đã tin tưởng Dongnaibeauty
+                        Cảm ơn bạn đã tin tưởng NNK SHOP
                     </h3>
                     <div class="row mt-5" style="margin-top: 35px; display: flex;">
                         <div class="col-6"
@@ -138,14 +138,11 @@
                          style="background-color: #fff; font-size: 18px; padding: 2px 20px 10px 20px;">
                         <div class="col-12 p-0">
                             <hr style="border-top: 1px solid #0000001a;">
-                            <table class="mt-2 w-100"
-                                   style="font-size: 16px; width: 100%; text-align: left;  margin-bottom: 5px;">
-                                {{-- <tr>
-                                    <td class="">Phí vận chuyển</td>
-                                    <td class="pr-3 text-right" style="text-align: right; padding-right: 20px;">
-                                        0 VNĐ
-                                    </td>
-                                </tr> --}}
+                            <table
+                                class="mt-2 w-100"
+                                style="font-size: 16px; width: 100%; text-align: left;  margin-bottom: 5px;"                              
+                            >
+                        
                                 <tr>
                                     <td class="">Tạm tính</td>
                                     <td class="pr-3 text-right" style="text-align: right; padding-right: 20px;">
@@ -178,7 +175,7 @@
 
                         <p>ạn có thể tham khảo fanpage của shop tại đây hoặc liên hệ với cửa hàng bằng cách để lại lời nhắn tại qua fanpage Trang liên hệ hoặc gửi thư tại đây. Hotline: 0363897327 - 09090909 (8:00 - 9:00 cả Thứ 7 và Chủ Nhật).</p>
 
-                        <b>Dongnaibeauty xin chân thành cám ơn vì đã tin tưởng.</b>
+                        <b>NNK SHOP xin chân thành cám ơn vì đã tin tưởng.</b>
                     </div>
                 </div>
             </div>

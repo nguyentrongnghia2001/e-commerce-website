@@ -4,11 +4,11 @@
 <head>
     <base href="{{('/')}}">
     <meta charset="UTF-8" />
-    <meta name="description" content="DongNaiBeauty" />
-    <meta name="keywords" content="DongNaiBeauty" />
+    <meta name="description" content="NNK Shop" />
+    <meta name="keywords" content="NNK Shop" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>@yield('title') | DongNaiBeauty</title>
+    <title>@yield('title') | NNK Shop</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
@@ -44,11 +44,11 @@
                 <div class="ht-left">
                     <div class="mail-service">
                         <i class="fa fa-envelope"></i>
-                        info.dongnaibeauty@gmail.com
+                        info.nnkshop@gmail.com
                     </div>
                     <div class="phone-service">
                         <i class="fa fa-phone"></i>
-                        0799646477 - 0363897327
+                        0335558888 - 03355599999
                     </div>
                 </div>
 
@@ -199,17 +199,17 @@
                     <div class="footer-widget">
                         <h5>Thông Tin Liên Hệ</h5>
                         <div class="info-footer">
-                            <p><i class="fa fa-map-marker" aria-hidden="true"></i></i> 789 Lý Thái Tổ, Xã Phú Hữu, Huyện Nhơn Trạch, Tỉnh Đồng Nai</p>
-                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> info.dongnaibeauty@gmail.com</p>
-                            <p><i class="fa fa-phone" aria-hidden="true"></i></i> 0799646477 - 0363897327</p>
-                            <p><i class="fa fa-paper-plane-o" aria-hidden="true"></i> dongnaibeauty.io.vn</p>
+                            <p><i class="fa fa-map-marker" aria-hidden="true"></i></i> NNK Shop 55 Độ Mixi, Xã Độ Thanh Phùng, Huyện Phùng Thanh, Tỉnh Phùng Thanh Độ</p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i> info.nnkshop@gmail.com</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i></i> 0335558888 - 03355599999</p>
+                            <p><i class="fa fa-paper-plane" aria-hidden="true"></i> nnkshop.xyz</p>
                         </div>
 
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="footer-widget">
-                        <h5>DONGNAIBEAUTY</h5>
+                        <h5>NNK Shop</h5>
                         <ul>
                             <li><a href="./shop">Sản Phẩm</a></li>
                             <li><a href="./blog">Tin tức</a></li>
@@ -223,10 +223,10 @@
                 <div class="col-lg-12">
                     <div class="footer-left">
                         <div class="footer-social">
-                            <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
-                            <a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-google"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
@@ -237,7 +237,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright-text">
-                            Copyright © 2023. All rights reserved. Designed by Nghia and Phi
+                            Copyright © 2024. All rights reserved. Designed by NNK Shop
                         </div>
                         <div class="payment-pic">
                             <img src="front/img/payment-method.png" alt="" />

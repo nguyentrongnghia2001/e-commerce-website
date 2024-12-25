@@ -38,8 +38,6 @@
             <div class="col-lg-5">
                 <div class="contact-title">
                     <h4>Liên hệ với chúng tôi</h4>
-                    <p>text
-                    </p>
                 </div>
                 <div class="contact-widget">
                     <div class="cw-item">
@@ -48,7 +46,7 @@
                         </div>
                         <div class="ci-text">
                             <span>Địa chỉ:</span>
-                            <p>789 Lý Thái Tổ, Xã Phú Hữu, Huyện Nhơn Trạch, Tỉnh Đồng Nai</p>
+                            <p>NNK Shop 55 Độ Mixi, Xã Độ Thanh Phùng, Huyện Phùng Thanh, Tỉnh Phùng Thanh Độ</p>
                         </div>
                     </div>
                     <div class="cw-item">
@@ -57,7 +55,7 @@
                         </div>
                         <div class="ci-text">
                             <span>Số điện thoại:</span>
-                            <p>0799646477 - 0363897327</p>
+                            <p>0335558888 - 03355599999</p>
                         </div>
                     </div>
                     <div class="cw-item">
@@ -66,7 +64,7 @@
                         </div>
                         <div class="ci-text">
                             <span>Email:</span>
-                            <p>info.dongnaibeauty@gmail.com</p>
+                            <p>info.nnkshop@gmail.com</p>
                         </div>
                     </div>
                 </div>
